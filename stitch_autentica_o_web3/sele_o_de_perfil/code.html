@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#ddb7ff",
+              "on-secondary-container": "#003e1c",
+              "surface": "#131313",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary": "#2a313b",
+              "surface-tint": "#ddb7ff",
+              "surface-bright": "#3a3939",
+              "on-tertiary-fixed-variant": "#404752",
+              "on-error-container": "#ffdad6",
+              "surface-container-lowest": "#0e0e0e",
+              "primary-container": "#b76dff",
+              "error": "#ffb4ab",
+              "on-background": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "on-primary-container": "#400071",
+              "surface-container": "#201f1f",
+              "outline-variant": "#4d4354",
+              "secondary-container": "#00b55d",
+              "secondary-fixed-dim": "#4de082",
+              "surface-dim": "#131313",
+              "outline": "#988d9f",
+              "surface-variant": "#353534",
+              "error-container": "#93000a",
+              "tertiary-container": "#8a919d",
+              "secondary": "#4de082",
+              "tertiary-fixed": "#dce3f0",
+              "on-secondary": "#003919",
+              "on-surface-variant": "#cfc2d6",
+              "on-tertiary-container": "#232a34",
+              "on-tertiary-fixed": "#151c25",
+              "surface-container-highest": "#353534",
+              "background": "#131313",
+              "on-secondary-fixed-variant": "#005227",
+              "on-primary-fixed": "#2c0051",
+              "inverse-on-surface": "#313030",
+              "on-primary": "#490080",
+              "inverse-primary": "#842bd2",
+              "on-surface": "#e5e2e1",
+              "primary-fixed": "#f0dbff",
+              "secondary-fixed": "#6dfe9c",
+              "surface-container-low": "#1c1b1b",
+              "on-primary-fixed-variant": "#6900b3",
+              "tertiary": "#c0c7d3",
+              "on-error": "#690005",
+              "primary": "#ddb7ff",
+              "on-secondary-fixed": "#00210c",
+              "tertiary-fixed-dim": "#c0c7d3"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(28, 27, 27, 0.6);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(77, 67, 84, 0.2);
+            border-left: 1px solid rgba(77, 67, 84, 0.2);
+        }
+        .radial-glow {
+            background: radial-gradient(circle at center, rgba(221, 183, 255, 0.08) 0%, transparent 70%);
+        }
+        .serif-italic { font-family: 'Noto Serif', serif; font-style: italic; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex">
+<!-- SideNavBar -->
+<aside class="w-64 border-r border-outline-variant/10 flex-col hidden lg:flex bg-surface-container-lowest">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<h1 class="font-headline font-bold text-lg leading-tight">BidRush</h1>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant/60">Decentralized Hub</p>
+</div>
+</div>
+</div>
+<nav class="mt-8 px-4 space-y-2 flex-grow">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-variant/30 transition-colors" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-sm font-medium">Trabalhos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-variant/30 transition-colors" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-sm font-medium">Mensagens</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-variant/30 transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Configurações</span>
+</a>
+</nav>
+<div class="p-4 border-t border-outline-variant/10">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container py-3 rounded-xl text-on-primary font-semibold text-sm mb-6">
+                Novo Projeto
+            </button>
+<div class="flex items-center gap-3 px-4 py-3 text-on-surface-variant">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-sm font-medium">User Profile</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col relative overflow-hidden">
+<!-- Ambient Decorative Glow -->
+<div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] radial-glow pointer-events-none"></div>
+<div class="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] radial-glow pointer-events-none opacity-50"></div>
+<!-- TopNavBar -->
+<header class="h-20 border-b border-outline-variant/10 flex items-center justify-between px-8 bg-surface/50 backdrop-blur-md z-10">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-full pl-12 pr-4 py-2.5 text-sm focus:ring-1 focus:ring-primary transition-all" placeholder="Buscar no ecossistema..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-surface-container-high px-3 py-1.5 rounded-full border border-outline-variant/20">
+<div class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(77,224,130,0.5)]"></div>
+<span class="text-xs font-medium text-on-surface">Mainnet</span>
+</div>
+<button class="px-4 py-1.5 rounded-full bg-surface-container-highest border border-outline-variant/30 text-xs font-mono tracking-wider text-primary">
+                    0x1a...3b4c
+                </button>
+<div class="w-10 h-10 rounded-full bg-surface-container-low border border-outline-variant/20 flex items-center justify-center overflow-hidden">
+<img alt="User Avatar" class="w-full h-full object-cover" data-alt="Close up profile portrait of a user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwOFVWTz_R7PukMvqCsjRkUY8tVL7morqA2-7jPSuJxCBvKPWsVzDCqmJZpW-yfLV_Me6P5JYoYBuA393LO_-qrGVv_Jukl4GAjfOS_fI0yNMqExtrT7Qwnq2TWkGfmW4fUpW7lm3ee2lVRucof1dby4vfTXGJhzN_q0MrLolViQzHDCGneM8lginaZLoTxPdbJlYxLZGEijQqnDPTcARDYHfvBLKzvhMHhPPLu-1DmTDEHv7-BAzSqduufL4HYqV54CC5oOpUKS2R"/>
+</div>
+<button class="p-2 text-on-surface-variant">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<!-- Role Selection Content -->
+<div class="flex-grow flex flex-col items-center justify-center p-12 z-10 relative">
+<div class="max-w-4xl w-full">
+<!-- Header -->
+<div class="text-center mb-16">
+<h2 class="font-headline text-5xl font-bold mb-4 tracking-tight">
+                        Escolha seu <span class="serif-italic text-primary">perfil</span>
+</h2>
+<p class="text-on-surface-variant text-lg max-w-lg mx-auto leading-relaxed">
+                        Selecione como você deseja interagir com a rede descentralizada de talentos BidRush.
+                    </p>
+</div>
+<!-- Selection Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Contractor Card -->
+<div class="glass-card p-10 rounded-[2rem] group cursor-pointer hover:border-primary/40 transition-all duration-500 relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"></div>
+<div class="mb-8 w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4">Quero Contratar</h3>
+<p class="text-on-surface-variant leading-relaxed mb-10">
+                            Publique projetos, gerencie equipes globais e liquide pagamentos via smart contracts com garantia total.
+                        </p>
+<a class="inline-flex items-center gap-2 text-primary font-semibold tracking-wide uppercase text-xs group-hover:gap-4 transition-all" href="#">
+                            Fluxo de Cliente
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Freelancer Card -->
+<div class="glass-card p-10 rounded-[2rem] group cursor-pointer hover:border-secondary/40 transition-all duration-500 relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary/5 rounded-full blur-3xl group-hover:bg-secondary/10 transition-colors"></div>
+<div class="mb-8 w-16 h-16 rounded-2xl bg-surface-container-highest flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4">Quero Trabalhar</h3>
+<p class="text-on-surface-variant leading-relaxed mb-10">
+                            Encontre oportunidades em Web3, construa sua reputação on-chain e receba pagamentos instantâneos em stablecoins.
+                        </p>
+<a class="inline-flex items-center gap-2 text-secondary font-semibold tracking-wide uppercase text-xs group-hover:gap-4 transition-all" href="#">
+                            Fluxo de Freelancer
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Footer Disclaimer -->
+<div class="mt-20 text-center">
+<div class="inline-flex items-center gap-3 px-6 py-3 bg-surface-container-low rounded-full border border-outline-variant/10">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-[10px] font-mono tracking-[0.2em] text-on-surface-variant uppercase">
+                            Transações seguradas por Smart Contracts
+                        </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Static Background Image for Depth -->
+<div class="absolute inset-0 opacity-10 mix-blend-overlay pointer-events-none">
+<img alt="Tech Background" class="w-full h-full object-cover" data-alt="Abstract futuristic digital network pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPpuuWRLcSV5msoeJkzbU7Gf9KfxmrWe-Do4hsrs_bzg1Am9ZXsPb-9S9EfS5UcAdtY72BvPT9lyOy7immje-HsxldpLfOlITBxB4qHMcpgQTPUstnykxUkvEylh3P2xK_431JamdmhADqxMSdVk6mGcw1ujfeDyevJSrx1RbUa1JgVjwX6tqzvpES2c1_6vUHa2DWjEeUYK-2nrCrCgrorCLTkKCT5YoNM4glDZpFnzglHbwsvUm8EqWNlZ5DyjvaI7yFGMIlMQAK"/>
+</div>
+</main>
+</body></html>

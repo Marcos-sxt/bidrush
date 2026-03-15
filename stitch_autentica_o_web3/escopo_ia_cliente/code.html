@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#ddb7ff",
+              "on-secondary-container": "#003e1c",
+              "surface": "#131313",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary": "#2a313b",
+              "surface-tint": "#ddb7ff",
+              "surface-bright": "#3a3939",
+              "on-tertiary-fixed-variant": "#404752",
+              "on-error-container": "#ffdad6",
+              "surface-container-lowest": "#0e0e0e",
+              "primary-container": "#b76dff",
+              "error": "#ffb4ab",
+              "on-background": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "on-primary-container": "#400071",
+              "surface-container": "#201f1f",
+              "outline-variant": "#4d4354",
+              "secondary-container": "#00b55d",
+              "secondary-fixed-dim": "#4de082",
+              "surface-dim": "#131313",
+              "outline": "#988d9f",
+              "surface-variant": "#353534",
+              "error-container": "#93000a",
+              "tertiary-container": "#8a919d",
+              "secondary": "#4de082",
+              "tertiary-fixed": "#dce3f0",
+              "on-secondary": "#003919",
+              "on-surface-variant": "#cfc2d6",
+              "on-tertiary-container": "#232a34",
+              "on-tertiary-fixed": "#151c25",
+              "surface-container-highest": "#353534",
+              "background": "#131313",
+              "on-secondary-fixed-variant": "#005227",
+              "on-primary-fixed": "#2c0051",
+              "inverse-on-surface": "#313030",
+              "on-primary": "#490080",
+              "inverse-primary": "#842bd2",
+              "on-surface": "#e5e2e1",
+              "primary-fixed": "#f0dbff",
+              "secondary-fixed": "#6dfe9c",
+              "surface-container-low": "#1c1b1b",
+              "on-primary-fixed-variant": "#6900b3",
+              "tertiary": "#c0c7d3",
+              "on-error": "#690005",
+              "primary": "#ddb7ff",
+              "on-secondary-fixed": "#00210c",
+              "tertiary-fixed-dim": "#c0c7d3"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #131313; color: #e5e2e1; }
+        .serif-italic { font-family: 'Noto Serif'; font-style: italic; }
+        .glass-card { background: rgba(28, 27, 27, 0.6); backdrop-filter: blur(20px); border-top: 1px solid rgba(77, 67, 84, 0.2); border-left: 1px solid rgba(77, 67, 84, 0.2); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="w-64 bg-surface-container-lowest border-r border-outline-variant/10 flex flex-col fixed h-full z-50">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">bolt</span>
+</div>
+<div>
+<h1 class="font-headline font-bold text-xl leading-none">BidRush</h1>
+<span class="text-[10px] text-primary tracking-widest uppercase">Decentralized Hub</span>
+</div>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 bg-surface-container-highest text-primary rounded-xl" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="font-medium">Trabalhos</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-medium">Mensagens</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-medium">Configurações</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 space-y-6">
+<button class="w-full py-3 bg-primary text-on-primary font-bold rounded-xl shadow-lg shadow-primary/10 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                Novo Projeto
+            </button>
+<div class="flex items-center gap-3 pt-6 border-t border-outline-variant/10">
+<span class="material-symbols-outlined text-3xl text-outline">account_circle</span>
+<div class="flex-1">
+<p class="text-sm font-semibold">User Profile</p>
+<p class="text-[10px] text-outline">0x1a...3b4c</p>
+</div>
+</div>
+</div>
+</aside>
+<main class="flex-1 ml-64 flex flex-col relative overflow-hidden">
+<!-- Radial Glow Decorations -->
+<div class="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="absolute bottom-[10%] -left-[5%] w-[400px] h-[400px] bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<!-- TopNavBar -->
+<header class="h-20 border-b border-outline-variant/10 px-8 flex items-center justify-between sticky top-0 bg-surface/80 backdrop-blur-md z-40">
+<div class="flex items-center bg-surface-container-lowest rounded-full px-4 py-2 border border-outline-variant/10 w-96">
+<span class="material-symbols-outlined text-outline">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-full text-on-surface" placeholder="Search..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1.5 bg-secondary/10 border border-secondary/20 rounded-full">
+<div class="w-2 h-2 bg-secondary rounded-full"></div>
+<span class="text-xs font-mono text-secondary">Mainnet</span>
+</div>
+<div class="px-4 py-1.5 bg-surface-container-high rounded-full border border-outline-variant/20 text-xs font-mono">
+                    0x1a...3b4c
+                </div>
+<button class="w-10 h-10 rounded-full hover:bg-surface-container-high flex items-center justify-center relative">
+<span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-surface"></span>
+</button>
+</div>
+</header>
+<!-- Content -->
+<div class="p-12 max-w-7xl mx-auto w-full flex-1 flex flex-col">
+<header class="mb-12">
+<h2 class="serif-italic text-6xl text-primary-fixed-dim tracking-tight">Esculpir o Futuro</h2>
+<p class="text-on-surface-variant mt-2 max-w-xl">Defina os parâmetros neurais e contratuais da sua próxima grande iniciativa descentralizada.</p>
+</header>
+<!-- Main Grid -->
+<div class="grid grid-cols-12 gap-8 flex-1">
+<!-- Left: AI Scope Assistant Chat -->
+<div class="col-span-12 lg:col-span-7 flex flex-col h-[600px]">
+<div class="glass-card rounded-3xl flex-1 flex flex-col overflow-hidden border border-outline-variant/10">
+<!-- Chat Header -->
+<div class="px-6 py-4 border-b border-outline-variant/10 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<span class="text-sm font-semibold tracking-wide">AI Oracle</span>
+</div>
+<!-- Messages -->
+<div class="flex-1 p-6 overflow-y-auto space-y-6 no-scrollbar">
+<!-- AI Message -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="w-8 h-8 shrink-0 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">bolt</span>
+</div>
+<div class="space-y-2">
+<div class="p-4 bg-surface-container-high rounded-2xl rounded-tl-none text-sm leading-relaxed">
+                                        Saudações. Estou pronto para moldar o escopo do seu projeto. Quais são os objetivos fundamentais da sua dApp de governança?
+                                    </div>
+<span class="text-[10px] text-outline ml-1">10:42 AM</span>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex gap-4 max-w-[85%] ml-auto flex-row-reverse">
+<div class="w-8 h-8 shrink-0 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-on-primary">person</span>
+</div>
+<div class="space-y-2 text-right">
+<div class="p-4 bg-primary/10 border border-primary/20 rounded-2xl rounded-tr-none text-sm leading-relaxed">
+                                        Preciso de um sistema de staking com multiplicadores baseados em tempo e um dashboard de tesouraria em tempo real.
+                                    </div>
+<span class="text-[10px] text-outline mr-1">10:44 AM</span>
+</div>
+</div>
+<!-- AI Message -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="w-8 h-8 shrink-0 rounded-full bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">bolt</span>
+</div>
+<div class="space-y-2">
+<div class="p-4 bg-surface-container-high rounded-2xl rounded-tl-none text-sm leading-relaxed">
+                                        Entendido. Sugiro o uso de <span class="text-primary">ERC-20 Voting Extension</span> para os multiplicadores. Devo incluir auditoria de segurança formal no orçamento sugerido?
+                                    </div>
+<span class="text-[10px] text-outline ml-1">10:45 AM</span>
+</div>
+</div>
+</div>
+<!-- Chat Input -->
+<div class="p-6 pt-2">
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-2xl py-4 pl-6 pr-14 text-sm focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Refine o escopo com o Oracle..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-primary text-on-primary rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_upward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Parâmetros do Contrato -->
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-8">
+<section class="glass-card rounded-3xl p-8 border border-outline-variant/10 flex-1">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-outline">description</span>
+<h3 class="font-semibold tracking-wider text-xs uppercase opacity-60">PARÂMETROS DO CONTRATO</h3>
+</div>
+<div class="space-y-10">
+<!-- Budget Input -->
+<div class="space-y-4">
+<label class="text-xs text-on-surface-variant font-medium">Orçamento Máximo USDC</label>
+<div class="flex items-end gap-2">
+<span class="serif-italic text-5xl text-primary-fixed-dim">15,500</span>
+<span class="text-lg font-mono text-outline mb-1.5">USDC</span>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full w-[65%] bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Date Picker Mock -->
+<div class="space-y-4">
+<label class="text-xs text-on-surface-variant font-medium">Prazo Final</label>
+<div class="flex items-center justify-between p-4 bg-surface-container-lowest border border-outline-variant/20 rounded-2xl">
+<span class="font-mono text-sm">24 DEZ, 2024</span>
+<span class="material-symbols-outlined text-outline">calendar_today</span>
+</div>
+</div>
+<!-- Reputation Score Selector -->
+<div class="space-y-4">
+<label class="text-xs text-on-surface-variant font-medium">Reputation Score</label>
+<div class="grid grid-cols-3 gap-3">
+<button class="py-3 border border-outline-variant/20 rounded-xl text-[10px] font-bold tracking-widest hover:border-primary/50 transition-colors uppercase">BRONZE</button>
+<button class="py-3 bg-surface-container-highest border border-primary/40 rounded-xl text-[10px] font-bold tracking-widest text-primary uppercase">SILVER</button>
+<button class="py-3 border border-outline-variant/20 rounded-xl text-[10px] font-bold tracking-widest hover:border-primary/50 transition-colors uppercase">GOLD</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<button class="py-5 bg-surface-variant text-on-surface-variant font-bold text-xs tracking-widest uppercase rounded-2xl hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">publish</span>
+                            POSTAR JOB PADRÃO
+                        </button>
+<button class="py-5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-xs tracking-widest uppercase rounded-2xl shadow-xl shadow-primary/20 hover:scale-[1.02] transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">bolt</span>
+                            INICIAR LEILÃO FLASH
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Visual Identity -->
+<div class="mt-auto px-12 py-8 flex items-center justify-between border-t border-outline-variant/5">
+<div class="flex items-center gap-8 opacity-40 grayscale">
+<img alt="Partner Logo" class="h-6 object-contain" data-alt="Abstract minimal tech company logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKwCTJWRKrxBECYpE0RdA-qUS7B1W2oRLz4UZDtI2BfJ2OwS2lh9PaBGi-wMwOQzGh5swyVWF18qwclrG7lPb4FT2-yDqR6TLXQ3Fq36RVR5R06B4bjtC96128KIK5jgKHCAX9tXmUTKkGSQnxnpmefHYMfoTKfXcVZ2l-faoo_Z1UjQ79qPt-MPpgnG1yxVjoQNYb-dnd0yr5FB_ZLxpvWSFwXOoNGkN4q1d-nFBwguNxosfuqT7EVi82drQ13KuQfV3VYVPdD2FM"/>
+<img alt="Partner Logo" class="h-6 object-contain" data-alt="Blockchain technology partner logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5ZQMuRNNwqmKchJD1lRF_FhzCOBqMEx99UMDn5rePya14xY7QcYlkLaKwlciQUWFZhAd0CywSR-jEzxr_sZLQg71xsJ7dI5vugASPUKlZRrhHOsD0Wp0PLfm_tPJJx_tEqqFy_vh2zg-wHLC_v3dBrr7S3BtpRpoWDBo98g1A-X1Z9oY_VwhshCFjnyoxud6V0d1R0MQhfX-WszAZ7ZQM8su5w2uGAqvftM2vZStrq7un9h12kJW_SOVXCxwBvs_Muy1Zi4Y3hjio"/>
+<img alt="Partner Logo" class="h-6 object-contain" data-alt="Decentralized network partner logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHGTyMGJ1A553wpJl_RlNJnPjp3XCp_ktTNt96xu46s_e3hs3Yo8BJAMD3suYPYzOmwzdNupGXrKbsbLubt3tblv2YvHrqrQ54ttMhZ4CoOMrjmtPCodt3DMmrM4yyqsaKw22ZfqGCs1l0UNhA92e1iWUXoG0I9kJXth2J5iW7gj9KvzT2O2Np8FS3DXmXh3xJcnnMbyyrWU9DQxMLf6OOSP9o3fkHVm68hPTT8kRhATRVNS7epAom0axJVU_mGfYR_r4If2aC8qCt"/>
+</div>
+<div class="text-[10px] font-mono text-outline tracking-tighter">
+                © 2024 BIDRUSH // SCULPTING_FUTURE_VERSION_2.0
+            </div>
+</div>
+</main>
+</body></html>

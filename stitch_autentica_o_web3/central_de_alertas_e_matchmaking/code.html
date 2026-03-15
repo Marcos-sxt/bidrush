@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-card {
+            background: rgba(28, 27, 27, 0.6);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(77, 67, 84, 0.2);
+            border-left: 1px solid rgba(77, 67, 84, 0.2);
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 50px -12px rgba(221, 183, 255, 0.08);
+        }
+        .pulse-border {
+            border: 1px solid rgba(183, 109, 255, 0.5);
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; border-color: rgba(183, 109, 255, 0.8); }
+            50% { opacity: 0.6; border-color: rgba(183, 109, 255, 0.2); }
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #131313;
+        }
+        h1, h2, h3, .serif-italic {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "outline": "#988d9f",
+                        "on-surface": "#e5e2e1",
+                        "tertiary": "#c0c7d3",
+                        "on-tertiary-container": "#232a34",
+                        "surface-variant": "#353534",
+                        "on-primary-container": "#400071",
+                        "outline-variant": "#4d4354",
+                        "error-container": "#93000a",
+                        "primary-container": "#b76dff",
+                        "surface-tint": "#ddb7ff",
+                        "on-primary-fixed-variant": "#6900b3",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-fixed": "#f0dbff",
+                        "inverse-on-surface": "#313030",
+                        "surface": "#131313",
+                        "secondary": "#4de082",
+                        "primary": "#ddb7ff",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#490080",
+                        "on-error": "#690005",
+                        "inverse-primary": "#842bd2",
+                        "on-tertiary": "#2a313b",
+                        "on-secondary-fixed": "#00210c",
+                        "inverse-surface": "#e5e2e1",
+                        "tertiary-fixed": "#dce3f0",
+                        "tertiary-container": "#8a919d",
+                        "on-tertiary-fixed": "#151c25",
+                        "on-surface-variant": "#cfc2d6",
+                        "on-tertiary-fixed-variant": "#404752",
+                        "on-secondary-container": "#003e1c",
+                        "error": "#ffb4ab",
+                        "surface-bright": "#3a3939",
+                        "secondary-fixed-dim": "#4de082",
+                        "on-primary-fixed": "#2c0051",
+                        "tertiary-fixed-dim": "#c0c7d3",
+                        "surface-container-highest": "#353534",
+                        "secondary-container": "#00b55d",
+                        "on-background": "#e5e2e1",
+                        "surface-container": "#201f1f",
+                        "surface-dim": "#131313",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#ddb7ff",
+                        "on-secondary": "#003919",
+                        "background": "#131313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-fixed": "#6dfe9c"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex">
+<!-- SideNavBar Shell -->
+<aside class="w-72 border-r border-outline-variant/10 flex flex-col h-screen sticky top-0 bg-surface-container-lowest">
+<div class="p-8">
+<div class="flex items-center gap-3 mb-10">
+<div class="w-10 h-10 bg-primary-container rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<div>
+<h1 class="text-xl font-bold tracking-tight">BidRush</h1>
+<p class="text-[10px] uppercase tracking-[0.2em] text-outline">Web3 Freelance</p>
+</div>
+</div>
+<nav class="space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:bg-surface-container-low group" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-medium">Trabalhos</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-medium">Mensagens</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-medium">Central de Alertas</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:bg-surface-container-low" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-medium">Configurações</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6">
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary py-4 rounded-xl font-bold flex items-center justify-center gap-2 editorial-shadow">
+<span class="material-symbols-outlined text-sm">add</span>
+                Novo Projeto
+            </button>
+</div>
+</aside>
+<main class="flex-1 overflow-y-auto">
+<!-- TopNavBar Shell -->
+<header class="h-20 border-b border-outline-variant/10 flex items-center justify-between px-10 bg-surface/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-6 w-1/3">
+<div class="relative w-full max-w-sm">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="bg-surface-container-lowest border-none rounded-full pl-12 pr-4 py-2 w-full text-sm focus:ring-1 focus:ring-primary" placeholder="Buscar projetos, skills..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary/10 border border-secondary/20">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-xs font-mono font-medium text-secondary">Mainnet</span>
+</div>
+<button class="p-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="flex items-center gap-3 pl-4 border-l border-outline-variant/20">
+<div class="flex flex-col items-end">
+<span class="text-sm font-mono font-medium">0x...4f2</span>
+</div>
+<img alt="User Avatar" class="w-10 h-10 rounded-full border border-outline-variant/30" data-alt="Abstract 3D colorful geometric avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATB9JxKsvjqxvCxh0RYpWbczcycSWvbIXcpRbwFf0TCMintl96KzGjUYDPYULBcH43WUgkuxAEckoMFGIKT_a4071P_WWqMTOaVr5ACyPtwtRkZ3I4NTUm6HUj6rw6gh3Or3wSHSkupi1PombPoAvIuaAn_l78mkMWTEfL1w7pmBOiOMBBaztEPqdxhJC3BqBnx_CT63ttRrGXr5MppbynR0kWDRotihfgC8E79fbXLTARsFhwW0ulErweVqhI2fDlAhHvOY_L5vMf"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="p-10 max-w-7xl mx-auto">
+<div class="mb-12 relative">
+<div class="absolute -top-20 -left-20 w-64 h-64 bg-primary/5 rounded-full blur-[100px]"></div>
+<h2 class="text-5xl font-headline mb-2 italic">Central de Inteligência</h2>
+<p class="text-on-surface-variant text-lg">Matchmaking algorítmico e oportunidades de alta prioridade em tempo real.</p>
+</div>
+<div class="grid grid-cols-12 gap-10">
+<!-- Left Column: Sugestões da IA -->
+<div class="col-span-7 space-y-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-2xl font-headline flex items-center gap-3">
+                            Sugestões da IA
+                            <span class="text-[10px] bg-primary/20 text-primary px-2 py-0.5 rounded uppercase tracking-widest font-bold">Smart Match</span>
+</h3>
+</div>
+<!-- IA Job Card 1 -->
+<div class="glass-card p-6 rounded-2xl flex flex-col gap-6 relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-xl font-headline font-bold mb-1">Smart Contract Audit</h4>
+<p class="text-on-surface-variant text-sm max-w-md">Revisão abrangente de segurança para protocolo de empréstimo cross-chain em Solana.</p>
+</div>
+<div class="text-right">
+<span class="text-2xl font-headline italic text-primary">4,500 USDC</span>
+<p class="text-[10px] text-outline uppercase tracking-wider">Preço Fixo</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest rounded text-xs font-mono text-on-surface-variant">Rust</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded text-xs font-mono text-on-surface-variant">Security</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded text-xs font-mono text-on-surface-variant">Solana</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">verified</span>
+</div>
+<span class="text-xs text-outline font-medium">98% Match de Perfil</span>
+</div>
+<button class="px-6 py-2 rounded-lg border border-outline-variant/30 text-sm font-bold hover:bg-surface-variant transition-colors">
+                                Ver Detalhes
+                            </button>
+</div>
+</div>
+<!-- IA Job Card 2 -->
+<div class="glass-card p-6 rounded-2xl flex flex-col gap-6 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary/40"></div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-xl font-headline font-bold mb-1">DeFi UI Design</h4>
+<p class="text-on-surface-variant text-sm max-w-md">Redesign completo da dashboard de governança para protocolo Blue Chip.</p>
+</div>
+<div class="text-right">
+<span class="text-2xl font-headline italic text-primary">2,800 USDC</span>
+<p class="text-[10px] text-outline uppercase tracking-wider">Budget Est.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest rounded text-xs font-mono text-on-surface-variant">Figma</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded text-xs font-mono text-on-surface-variant">Web3 UX</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded text-xs font-mono text-on-surface-variant">Motion</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">auto_awesome</span>
+</div>
+<span class="text-xs text-outline font-medium">Recomendado com base em seu portfólio</span>
+</div>
+<button class="px-6 py-2 rounded-lg border border-outline-variant/30 text-sm font-bold hover:bg-surface-variant transition-colors">
+                                Ver Detalhes
+                            </button>
+</div>
+</div>
+<!-- IA Job Card 3 -->
+<div class="glass-card p-6 rounded-2xl flex flex-col gap-6 relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary/40"></div>
+<div class="flex justify-between items-start">
+<div>
+<h4 class="text-xl font-headline font-bold mb-1">EVM Bridge Integration</h4>
+<p class="text-on-surface-variant text-sm max-w-md">Integrar ponte LayerZero para novos mercados de liquidez.</p>
+</div>
+<div class="text-right">
+<span class="text-2xl font-headline italic text-primary">6,200 USDC</span>
+<p class="text-[10px] text-outline uppercase tracking-wider">Contrato Mensal</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-highest rounded text-xs font-mono text-on-surface-variant">Solidity</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded text-xs font-mono text-on-surface-variant">EVM</span>
+<span class="px-3 py-1 bg-surface-container-highest rounded text-xs font-mono text-on-surface-variant">Hardhat</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-xs">verified</span>
+</div>
+<span class="text-xs text-outline font-medium">92% Match de Perfil</span>
+</div>
+<button class="px-6 py-2 rounded-lg border border-outline-variant/30 text-sm font-bold hover:bg-surface-variant transition-colors">
+                                Ver Detalhes
+                            </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Alertas Flash -->
+<div class="col-span-5 space-y-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-2xl font-headline flex items-center gap-3 text-primary">
+                            Alertas Flash
+                            <span class="material-symbols-outlined text-xl animate-pulse">emergency</span>
+</h3>
+<span class="text-xs font-mono text-outline uppercase">Urgente</span>
+</div>
+<!-- Flash Alert Card 1 -->
+<div class="pulse-border bg-surface-container-low/40 p-6 rounded-2xl relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-primary">Leilão Ativo</span>
+</div>
+<h4 class="text-lg font-headline font-bold">Bug Fix: Emergency Patch</h4>
+</div>
+<div class="bg-surface-container-highest px-3 py-1 rounded-lg border border-outline-variant/20">
+<span class="text-xl font-mono font-bold italic">01:45</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest/50 rounded-xl p-4 mb-6 border border-outline-variant/10">
+<div class="flex justify-between items-center text-sm mb-2">
+<span class="text-outline">Lance Atual:</span>
+<span class="font-bold text-secondary">1,250 USDC</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-3/4"></div>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-secondary to-on-secondary-container text-on-secondary py-3 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-secondary/10">
+                            Entrar no Leilão
+                        </button>
+</div>
+<!-- Flash Alert Card 2 -->
+<div class="pulse-border bg-surface-container-low/40 p-6 rounded-2xl relative overflow-hidden">
+<div class="flex justify-between items-start mb-4">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-primary">Alta Demanda</span>
+</div>
+<h4 class="text-lg font-headline font-bold">Zk-Proof Implementation</h4>
+</div>
+<div class="bg-surface-container-highest px-3 py-1 rounded-lg border border-outline-variant/20">
+<span class="text-xl font-mono font-bold italic">08:22</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest/50 rounded-xl p-4 mb-6 border border-outline-variant/10">
+<div class="flex justify-between items-center text-sm mb-2">
+<span class="text-outline">Lance Atual:</span>
+<span class="font-bold text-secondary">3,100 USDC</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-1/2"></div>
+</div>
+</div>
+<button class="w-full bg-gradient-to-r from-secondary to-on-secondary-container text-on-secondary py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+                            Entrar no Leilão
+                        </button>
+</div>
+<!-- Market Insights Panel -->
+<div class="glass-card p-6 rounded-2xl mt-12">
+<h4 class="font-headline italic text-lg mb-4">Resumo do Ecossistema</h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-sm text-outline">Gás Médio (Ethereum)</span>
+<span class="text-sm font-mono text-primary">24 Gwei</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-outline">Projetos Ativos (24h)</span>
+<span class="text-sm font-mono text-primary">142</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-sm text-outline">Valor Total Transacionado</span>
+<span class="text-sm font-mono text-secondary">1.2M USDC</span>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant/10">
+<p class="text-[10px] text-outline leading-relaxed uppercase tracking-widest">
+                                Tendência: Alta demanda por desenvolvedores Cairo e Noir no ecossistema L2.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Background Decorative Elements -->
+<div class="fixed bottom-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
+<div class="fixed top-1/4 left-1/4 w-[300px] h-[300px] bg-secondary/5 rounded-full blur-[100px] -z-10"></div>
+</body></html>

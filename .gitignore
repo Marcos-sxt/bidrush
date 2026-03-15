@@ -1,10 +1,16 @@
 # Dependencies
 node_modules/
+**/node_modules/
+
+# Frontend build
+frontend/dist/
+frontend/dist-ssr/
 
 # Foundry
 contracts/out/
 contracts/cache/
 contracts/broadcast/
+contracts/lib/
 
 # Environment
 .env

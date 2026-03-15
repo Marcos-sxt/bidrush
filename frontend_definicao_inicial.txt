@@ -1,0 +1,20 @@
+ESCOPO DO SISTEMA MONAD BLITZ
+PAGINA 1 AUTENTICACAO WEB3 E EXTRACAO DE ESTADO
+O QUE TEM NA TELA Botao principal de Conectar Carteira. Pop up de assinatura criptografica da carteira.
+ACAO E LOGICA O usuario clica no botao e assina a transacao zero gas. O sistema nao abre formulario de email ou senha. O front end chama o RPC da Monad para ler o historico daquela carteira na rede. O sistema calcula o Score de Qualidade baseado em commits e escrows concluidos no passado. O sistema redireciona o usuario para a visao de Cliente ou visao de Freelancer dependendo do clique inicial de entrada.
+PAGINA 2 CARDAPIO DE SERVICOS E GATILHO DE LEILAO VISAO DO CLIENTE
+O QUE TEM NA TELA Caixa de texto para interagir com a IA descrevendo a necessidade. Painel de configuracao de parametros do smart contract valor maximo e score minimo. Botao vermelho de Disparar Leilao Flash.
+ACAO E LOGICA O cliente digita o que precisa. A IA processa o texto e sugere os parametros tecnicos. O cliente ajusta os parametros dizendo que quer pagar no maximo 300 dolares e exige score minimo de 80. O cliente clica no botao de disparar. A carteira pede confirmacao e o cliente trava os 300 dolares no contrato Escrow. O sistema emite o evento de alerta na blockchain avisando a rede.
+PAGINA 3 TERMINAL DE APLICACAO MASSIVA VISAO DO FREELANCER
+O QUE TEM NA TELA Alerta visual piscando com o escopo do leilao ativo e cronometro de apenas 2 minutos. Input de valor para o freelancer digitar o seu lance de preco. Input de tempo estimado de entrega. Botao de Enviar Lance.
+ACAO E LOGICA O freelancer recebe o alerta e le o escopo. Ele digita que faz por 250 dolares e clica em enviar. O smart contract recebe a transacao e verifica o Score de Qualidade daquela carteira. Se o score for menor que 80 a transacao falha e reverte instantaneamente poupando tempo. Se o score for maior o contrato registra o lance. A execucao paralela da Monad processa centenas desses lances concorrentes simultaneamente no mesmo bloco.
+PAGINA 4 DASHBOARD DE RESOLUCAO DA IA VISAO DO CLIENTE
+O QUE TEM NA TELA
+Cronometro zerado indicando fim do leilao. Lista limpa exibindo apenas as 3 melhores propostas. Botao verde de Autorizar Inicio ao lado de cada proposta.
+ACAO E LOGICA O leilao acaba e o cliente nao precisa ler as propostas reprovadas. A IA no front end consome os dados dos lances bem sucedidos no contrato e exibe apenas o top 3 cruzando o menor preco com o maior score. O cliente analisa os tres finalistas e clica em Autorizar Inicio no seu favorito. O contrato inteligente atrela aquela carteira especifica ao trabalho e bloqueia as outras.
+PAGINA 5 WORKSPACE COMPARTILHADO E LIQUIDACAO
+O QUE TEM NA TELA Area para o freelancer colar o link do repositorio ou prova de conclusao. Botao de Enviar Entrega visivel para o freelancer. Painel de revisao visivel para o cliente. Botao de Aprovar e Pagar visivel para o cliente. Botao de Abrir Disputa visivel para ambos.
+ACAO E LOGICA O freelancer termina o trabalho cola o link e clica em enviar. O cliente testa a solucao. Se estiver tudo certo o cliente clica em Aprovar e Pagar. O contrato libera os fundos travados e transfere de forma instantanea e atomica para o freelancer. O contrato emite um evento que atualiza e aumenta o Score de Qualidade do freelancer na rede.
+PAGINA 6 TRIBUNAL DE AUDITORIA DESCENTRALIZADA
+O QUE TEM NA TELA Aviso vermelho de Disputa Ativa. Links para as provas de entrega e historico. Painel de votacao com botoes A favor do Cliente e A favor do Freelancer.
+ACAO E LOGICA Se o cliente recusar a entrega a pagina muda para o modo tribunal. O sistema notifica carteiras aleatorias com score muito alto que estao ativas na plataforma. Esses auditores anonimos entram avaliam o codigo e clicam em votar. A rede processa os votos paralelos. Atingindo a maioria o contrato liquida o dinheiro para quem tem razao e queima severamente a pontuacao do fraudador.

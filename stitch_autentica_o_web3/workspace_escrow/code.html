@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed-dim": "#ddb7ff",
+              "on-secondary-container": "#003e1c",
+              "surface": "#131313",
+              "inverse-surface": "#e5e2e1",
+              "on-tertiary": "#2a313b",
+              "surface-tint": "#ddb7ff",
+              "surface-bright": "#3a3939",
+              "on-tertiary-fixed-variant": "#404752",
+              "on-error-container": "#ffdad6",
+              "surface-container-lowest": "#0e0e0e",
+              "primary-container": "#b76dff",
+              "error": "#ffb4ab",
+              "on-background": "#e5e2e1",
+              "surface-container-high": "#2a2a2a",
+              "on-primary-container": "#400071",
+              "surface-container": "#201f1f",
+              "outline-variant": "#4d4354",
+              "secondary-container": "#00b55d",
+              "secondary-fixed-dim": "#4de082",
+              "surface-dim": "#131313",
+              "outline": "#988d9f",
+              "surface-variant": "#353534",
+              "error-container": "#93000a",
+              "tertiary-container": "#8a919d",
+              "secondary": "#4de082",
+              "tertiary-fixed": "#dce3f0",
+              "on-secondary": "#003919",
+              "on-surface-variant": "#cfc2d6",
+              "on-tertiary-container": "#232a34",
+              "on-tertiary-fixed": "#151c25",
+              "surface-container-highest": "#353534",
+              "background": "#131313",
+              "on-secondary-fixed-variant": "#005227",
+              "on-primary-fixed": "#2c0051",
+              "inverse-on-surface": "#313030",
+              "on-primary": "#490080",
+              "inverse-primary": "#842bd2",
+              "on-surface": "#e5e2e1",
+              "primary-fixed": "#f0dbff",
+              "secondary-fixed": "#6dfe9c",
+              "surface-container-low": "#1c1b1b",
+              "on-primary-fixed-variant": "#6900b3",
+              "tertiary": "#c0c7d3",
+              "on-error": "#690005",
+              "primary": "#ddb7ff",
+              "on-secondary-fixed": "#00210c",
+              "tertiary-fixed-dim": "#c0c7d3"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      body { font-family: 'Inter', sans-serif; background-color: #131313; color: #e5e2e1; }
+      .glass-card { background: rgba(28, 27, 27, 0.6); backdrop-filter: blur(16px); border-top: 1px solid rgba(77, 67, 84, 0.2); border-left: 1px solid rgba(77, 67, 84, 0.2); }
+      .radial-glow { background: radial-gradient(circle, rgba(221, 183, 255, 0.05) 0%, transparent 70%); }
+      .serif-italic { font-family: 'Noto Serif', serif; font-style: italic; }
+      .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="w-64 border-r border-outline-variant/10 bg-surface flex flex-col fixed h-full z-50">
+<div class="p-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary">bolt</span>
+</div>
+<div>
+<h1 class="font-bold text-lg leading-none">BidRush</h1>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-widest">Decentralized Hub</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface-container-highest text-primary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-surface-container-low transition-colors text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-sm font-medium">Trabalhos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-surface-container-low transition-colors text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-sm font-medium">Mensagens</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-surface-container-low transition-colors text-on-surface-variant" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Configurações</span>
+</a>
+</nav>
+<div class="p-4 border-t border-outline-variant/10">
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-bold text-sm mb-4">
+                Novo Projeto
+            </button>
+<div class="flex items-center gap-3 px-4 py-2">
+<span class="material-symbols-outlined text-on-surface-variant">account_circle</span>
+<span class="text-sm font-medium">User Profile</span>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-64 min-h-screen bg-surface relative overflow-hidden">
+<!-- Radial Glow Backgrounds -->
+<div class="absolute top-0 right-0 w-[600px] h-[600px] radial-glow -z-10 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] radial-glow -z-10 pointer-events-none"></div>
+<!-- TopNavBar -->
+<header class="h-20 border-b border-outline-variant/10 flex items-center justify-between px-8 bg-surface/80 backdrop-blur-md sticky top-0 z-40">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-sm">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-full py-2 pl-10 pr-4 text-sm focus:ring-1 focus:ring-primary transition-all" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="px-3 py-1 bg-surface-container-highest text-secondary text-[10px] font-bold tracking-widest rounded-full uppercase border border-secondary/20">Mainnet</span>
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant/10">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-xs font-mono">0x1a...3b4c</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+</div>
+</header>
+<div class="p-8 pb-32">
+<!-- Header Section -->
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-on-secondary-fixed-variant/20 text-secondary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">verified_user</span> Smart Contract Active
+                        </span>
+<span class="text-on-surface-variant text-sm font-mono opacity-50">#SC-29384-Z</span>
+</div>
+<h2 class="text-4xl serif-italic font-bold">Desenvolvimento Interface dApp Staking</h2>
+</div>
+</div>
+<!-- Main Layout: Bento Grid -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Left Column: Workspace -->
+<div class="col-span-12 lg:col-span-7 space-y-8">
+<!-- Freelancer Card -->
+<div class="glass-card p-6 rounded-2xl flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-xl object-cover border border-outline-variant/20" data-alt="Professional headshot of a software developer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXTbSsobl7Saa9z84Dthip5hfCG0WaXlKx7EiSNtkCRZKxUqkYLuFUFmR0O4jaZb1saWy8UjI_ApsCVtT8gCe8vaf_EVTd1SaeO3NOn6fTQ4BXYGySJ7FtNhYluOZqzqWEgykBWet7lJ3ZpdDuvjep58paskuFok46XZSzIPfJ_tyNXj_1olDHTyVIcApzBW28OzAbnRu9QVdg81yuGHQUTh9XFPeWq4lasIaruzLbrtpO5jDJB-aZqDugOBHnXIEBWqPEz6ZiH7Dd"/>
+<div>
+<h4 class="font-bold text-lg leading-none">Alex Rivera</h4>
+<p class="text-sm text-on-surface-variant mt-1">Full Stack Blockchain Dev</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-xs text-secondary flex items-center"><span class="material-symbols-outlined text-sm mr-1">star</span> 4.9 (124)</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-xs text-on-surface-variant">Level 3 Seller</span>
+</div>
+</div>
+</div>
+<button class="bg-surface-container-high hover:bg-surface-container-highest transition-colors px-6 py-2 rounded-xl text-sm font-medium">Chat Freelancer</button>
+</div>
+<!-- Scope Section -->
+<div class="space-y-4">
+<h3 class="text-sm font-mono uppercase tracking-widest text-on-surface-variant">ESCOPO DA ENTREGA</h3>
+<div class="bg-surface-container-low rounded-2xl p-6 space-y-4 border border-outline-variant/10">
+<ul class="space-y-3">
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+<span>Integração completa com contratos de Staking em Solidity</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+<span>Dashboard responsivo com suporte a Dark/Light Mode</span>
+</li>
+<li class="flex items-start gap-3 text-sm">
+<span class="material-symbols-outlined text-outline text-lg">radio_button_unchecked</span>
+<span>Documentação técnica e guia de deploy</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Drag and Drop Workspace -->
+<div class="space-y-4">
+<h3 class="text-sm font-mono uppercase tracking-widest text-on-surface-variant">ÁREA DE TRABALHO</h3>
+<div class="border-2 border-dashed border-outline-variant/30 rounded-3xl p-10 flex flex-col items-center justify-center bg-surface-container-lowest/50 group hover:border-primary/50 transition-all">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-high flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl text-primary">cloud_upload</span>
+</div>
+<p class="text-on-surface font-medium">Solte seus arquivos aqui</p>
+<p class="text-xs text-on-surface-variant mt-1">Formatos suportados: .zip, .pdf, .js (Máx 100MB)</p>
+</div>
+<!-- Delivered File -->
+<div class="glass-card p-4 rounded-xl flex items-center justify-between border-l-4 border-l-secondary">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-on-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">folder_zip</span>
+</div>
+<div>
+<p class="text-sm font-bold">final-delivery-v1.zip</p>
+<p class="text-[10px] text-on-surface-variant">42.8 MB • Enviado há 2 horas</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<button class="w-8 h-8 rounded-full hover:bg-surface-container-highest flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Escrow Panel -->
+<div class="col-span-12 lg:col-span-5 space-y-8">
+<div class="glass-card rounded-3xl p-8 border border-primary/20 relative overflow-hidden">
+<!-- Decorative glow -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/10 blur-3xl rounded-full"></div>
+<div class="text-center mb-8 relative">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-surface-container-highest mb-6 shadow-xl border border-outline-variant/20">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<h3 class="text-xl font-bold uppercase tracking-tight mb-2">Escrow em Custódia</h3>
+<p class="text-on-surface-variant text-sm px-8">O pagamento está retido de forma segura pelo contrato inteligente BidRush.</p>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 mb-8">
+<p class="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant mb-2">VALOR BLOQUEADO</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-bold text-primary">2450.00</span>
+<span class="text-lg font-medium opacity-60">USDT</span>
+</div>
+</div>
+<div class="space-y-6">
+<h4 class="text-xs font-mono uppercase tracking-widest text-on-surface-variant border-b border-outline-variant/10 pb-2">Status do Contrato</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="flex-1">
+<p class="text-sm font-medium">Contrato Criado</p>
+<p class="text-xs text-on-surface-variant">12 Out, 2023 - 10:24</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="flex-1">
+<p class="text-sm font-medium">Fundos Depositados</p>
+<p class="text-xs text-on-surface-variant">12 Out, 2023 - 10:45</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+<div class="flex-1">
+<p class="text-sm font-medium">Aguardando Revisão</p>
+<p class="text-xs text-on-surface-variant">Entrega finalizada pelo Freelancer</p>
+</div>
+</div>
+<div class="flex items-center gap-4 opacity-30">
+<div class="w-2 h-2 rounded-full bg-outline"></div>
+<div class="flex-1">
+<p class="text-sm font-medium">Liberação do Pagamento</p>
+<p class="text-xs text-on-surface-variant">Pendente aprovação do cliente</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-10 space-y-4">
+<button class="w-full bg-gradient-to-r from-secondary to-secondary-container hover:scale-[1.02] transition-transform text-on-secondary font-bold py-4 rounded-2xl flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">payments</span>
+                                Aprovar e Liberar Pagamento
+                            </button>
+<button class="w-full bg-surface-container-high border border-outline-variant/30 hover:bg-surface-container-highest transition-colors text-on-surface-variant py-4 rounded-2xl font-bold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">gavel</span>
+                                Abrir Disputa
+                            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Metrics Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+<div class="glass-card p-6 rounded-2xl">
+<p class="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant mb-2">Iniciado em</p>
+<p class="text-lg font-bold">12 Out, 2023</p>
+</div>
+<div class="glass-card p-6 rounded-2xl">
+<p class="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant mb-2">Prazo Final</p>
+<p class="text-lg font-bold">25 Out, 2023</p>
+</div>
+<div class="glass-card p-6 rounded-2xl border-l-4 border-l-primary">
+<p class="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant mb-2">Tempo Decorrido</p>
+<div class="flex items-baseline gap-2">
+<p class="text-lg font-bold text-primary">08</p>
+<p class="text-sm text-on-surface-variant">Dias Restantes</p>
+</div>
+</div>
+<div class="glass-card p-6 rounded-2xl">
+<p class="text-[10px] font-mono uppercase tracking-widest text-on-surface-variant mb-2">Segurança</p>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">security</span>
+<p class="text-lg font-bold">Proteção Total</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Branding -->
+<footer class="absolute bottom-8 right-8 pointer-events-none opacity-20">
+<h2 class="serif-italic text-6xl text-on-surface-variant">BidRush.</h2>
+</footer>
+</main>
+</body></html>

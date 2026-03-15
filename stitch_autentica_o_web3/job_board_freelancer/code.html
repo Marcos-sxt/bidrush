@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#ddb7ff",
+                        "on-secondary-container": "#003e1c",
+                        "surface": "#131313",
+                        "inverse-surface": "#e5e2e1",
+                        "on-tertiary": "#2a313b",
+                        "surface-tint": "#ddb7ff",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed-variant": "#404752",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#0e0e0e",
+                        "primary-container": "#b76dff",
+                        "error": "#ffb4ab",
+                        "on-background": "#e5e2e1",
+                        "surface-container-high": "#2a2a2a",
+                        "on-primary-container": "#400071",
+                        "surface-container": "#201f1f",
+                        "outline-variant": "#4d4354",
+                        "secondary-container": "#00b55d",
+                        "secondary-fixed-dim": "#4de082",
+                        "surface-dim": "#131313",
+                        "outline": "#988d9f",
+                        "surface-variant": "#353534",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#8a919d",
+                        "secondary": "#4de082",
+                        "tertiary-fixed": "#dce3f0",
+                        "on-secondary": "#003919",
+                        "on-surface-variant": "#cfc2d6",
+                        "on-tertiary-container": "#232a34",
+                        "on-tertiary-fixed": "#151c25",
+                        "surface-container-highest": "#353534",
+                        "background": "#131313",
+                        "on-secondary-fixed-variant": "#005227",
+                        "on-primary-fixed": "#2c0051",
+                        "inverse-on-surface": "#313030",
+                        "on-primary": "#490080",
+                        "inverse-primary": "#842bd2",
+                        "on-surface": "#e5e2e1",
+                        "primary-fixed": "#f0dbff",
+                        "secondary-fixed": "#6dfe9c",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary-fixed-variant": "#6900b3",
+                        "tertiary": "#c0c7d3",
+                        "on-error": "#690005",
+                        "primary": "#ddb7ff",
+                        "on-secondary-fixed": "#00210c",
+                        "tertiary-fixed-dim": "#c0c7d3"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .serif-italic { font-family: 'Noto Serif', serif; font-style: italic; }
+        .glass-card {
+            background: rgba(28, 27, 27, 0.6);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(77, 67, 84, 0.2);
+            border-left: 1px solid rgba(77, 67, 84, 0.2);
+        }
+        .radial-glow {
+            background: radial-gradient(circle at center, rgba(221, 183, 255, 0.05) 0%, transparent 70%);
+        }
+        .flash-glow {
+            background: radial-gradient(circle at top right, rgba(77, 224, 130, 0.08) 0%, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen selection:bg-primary selection:text-on-primary">
+<div class="flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="w-64 flex-shrink-0 bg-surface-container-lowest border-r border-outline-variant/10 flex flex-col">
+<div class="p-6">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container">rocket_launch</span>
+</div>
+<div>
+<h1 class="font-bold text-lg leading-tight">BidRush</h1>
+<p class="text-[10px] text-on-surface-variant tracking-widest uppercase">Decentralized Hub</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:bg-surface-container" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all bg-surface-container text-primary" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-sm font-medium">Trabalhos</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:bg-surface-container" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="text-sm font-medium">Mensagens</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-on-surface-variant hover:bg-surface-container" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Configurações</span>
+</a>
+</nav>
+<button class="mt-8 w-full py-3 px-4 rounded-xl bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-sm shadow-lg shadow-primary/10 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+                    Novo Projeto
+                </button>
+</div>
+<div class="mt-auto p-6 border-t border-outline-variant/10">
+<div class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all cursor-pointer">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-sm font-medium">User Profile</span>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col overflow-hidden relative">
+<!-- Ambient Background Glows -->
+<div class="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] radial-glow pointer-events-none"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[40%] h-[40%] radial-glow pointer-events-none"></div>
+<!-- TopNavBar -->
+<header class="h-20 flex-shrink-0 border-b border-outline-variant/10 flex items-center justify-between px-8 bg-surface/50 backdrop-blur-md z-10">
+<div class="flex items-center w-1/3">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-xl">search</span>
+<input class="w-full bg-surface-container-lowest border-none rounded-full py-2.5 pl-11 pr-4 text-sm focus:ring-1 focus:ring-primary transition-all placeholder:text-outline/50" placeholder="Procurar oportunidades..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/20">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="text-xs font-medium text-on-surface-variant uppercase tracking-wider">Mainnet</span>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-full bg-surface-container-high text-on-surface text-xs font-mono border border-outline-variant/30 hover:bg-surface-variant transition-colors">
+                        0x1a...3b4c
+                    </button>
+<button class="p-2.5 rounded-full bg-surface-container-high text-on-surface-variant relative">
+<span class="material-symbols-outlined text-xl">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-surface-container-high"></span>
+</button>
+</div>
+</header>
+<!-- Scrollable Body -->
+<div class="flex-1 overflow-y-auto p-8 relative">
+<!-- Page Header & Tabs -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<h2 class="text-5xl font-headline serif-italic text-on-surface leading-tight">Job Board</h2>
+<p class="text-on-surface-variant mt-2 text-lg">Descubra as próximas missões de elite no ecossistema.</p>
+</div>
+<div class="flex bg-surface-container-lowest p-1.5 rounded-2xl border border-outline-variant/10">
+<button class="px-6 py-2.5 rounded-xl text-sm font-medium transition-all text-on-surface-variant hover:text-on-surface">Padrão</button>
+<button class="px-6 py-2.5 rounded-xl text-sm font-bold transition-all bg-surface-container-highest text-primary shadow-sm">Leilões Flash</button>
+<button class="px-6 py-2.5 rounded-xl text-sm font-medium transition-all text-on-surface-variant hover:text-on-surface">Arquivados</button>
+</div>
+</div>
+<!-- Job Grid/List -->
+<div class="max-w-5xl mx-auto space-y-6">
+<!-- Flash Auction Card -->
+<div class="glass-card flash-glow rounded-3xl p-8 relative overflow-hidden group hover:bg-surface-container-low/80 transition-all duration-500">
+<div class="absolute top-0 right-0 p-8">
+<span class="px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-[10px] font-bold tracking-[0.2em] uppercase">FLASH AUCTION</span>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Project Logo" class="w-full h-full object-cover" data-alt="Abstract colorful geometric shape logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjWe9giZOYu6INVhbLo_QnFlVS62Kz6uB-UJeQvzgAWn89A1nff3qNHsCXQdXJa66UjDzqsB7b1K9c27z-i9_WG9XwS3c-wZYdKV27m4HzTSiZeNwEHsFnL8pRwUOFHqSL5GhwZZpwcfl06pIlV0nDrwKLsVDkGfQQrEY-rCHu1hJakU7z0sQ0mDdpnXBkLbRlVTdsBDQNylsZwzGWx9koW0cHpgjMdujLC9O33xPS-Q_GXaNZnRItgo_UClsSEgD-CxUMXBNjfKfE"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<h3 class="text-2xl font-headline font-bold text-on-surface">Smart Contract Security Audit</h3>
+<span class="text-on-surface-variant/40 text-sm">• 2h ago</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-2xl mb-6">Auditoria crítica para um novo protocolo de Lending RWA. Requer experiência comprovada em vulnerabilidades de reentrância e lógica de oráculos.</p>
+<div class="flex flex-wrap items-center gap-6">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-xl">timer</span>
+<span class="text-sm font-mono font-bold">00:42:15 restantes</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">group</span>
+<span class="text-sm">14 Lances ativos</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">verified</span>
+<span class="text-sm">Empresa Verificada</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end justify-between self-stretch">
+<div class="text-right">
+<p class="text-xs text-on-surface-variant uppercase tracking-widest mb-1">Lance Atual</p>
+<p class="text-4xl font-headline font-bold text-secondary">4.20 ETH</p>
+<p class="text-xs text-on-surface-variant/60">≈ $9,450.00 USDC</p>
+</div>
+<button class="w-full md:w-auto px-8 py-3 rounded-xl bg-gradient-to-br from-secondary to-on-secondary-fixed-variant text-on-secondary font-bold text-sm tracking-wide transition-transform active:scale-95">
+                                    LANÇAR LANCE
+                                </button>
+</div>
+</div>
+</div>
+<!-- Standard Job Card -->
+<div class="glass-card rounded-3xl p-8 relative group hover:bg-surface-container-low transition-all duration-300">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 grayscale group-hover:grayscale-0 transition-all">
+<img alt="Project Logo" class="w-full h-full object-cover" data-alt="Abstract blue geometric design logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADiLQoT5ROl6_Cjz4Qr31ZPgPeiZOnqUhFRWjEdXV8u4pTC3eY1d39280ljhxU_IFVyqsB7-QzRsygc0M8HqG6OT4RwhflYVsNIaH9hLSbO4wscZTnIwfMtg-TAsWwI7vnMeno01AuNoV2MVyJuB_97Lg81BuQ0ujF6KDjrO7z3-I7tSlv5hQAhPM2nvHQHZ_PraF6GoxxCDlVuTopRcUZWVmOhkKwyKk3gHKSSQikSjIDMctzKr67K-cFx9Y4eOA6639BWL_W0YMB"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<h3 class="text-2xl font-headline font-bold text-on-surface">Next.js DApp Frontend Dev</h3>
+<span class="text-on-surface-variant/40 text-sm">• 5h ago</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-2xl mb-6">Implementação de interface para DEX agregadora. Uso obrigatório de Tailwind, Wagmi e Viem. Design Figma já finalizado.</p>
+<div class="flex flex-wrap items-center gap-4">
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-medium">React</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-medium">Ethers.js</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-medium">Tailwind CSS</span>
+</div>
+</div>
+<div class="flex flex-col items-end justify-between self-stretch">
+<div class="text-right">
+<p class="text-xs text-on-surface-variant uppercase tracking-widest mb-1">Recompensa</p>
+<p class="text-3xl font-headline font-bold text-primary">2,500 USDC</p>
+<p class="text-xs text-on-surface-variant/60">Pagamento Milestone</p>
+</div>
+<button class="w-full md:w-auto px-8 py-3 rounded-xl bg-surface-container-highest text-on-surface font-bold text-sm tracking-wide border border-outline-variant/30 hover:bg-surface-variant transition-colors">
+                                    VER DETALHES
+                                </button>
+</div>
+</div>
+</div>
+<!-- Standard Job Card 2 -->
+<div class="glass-card rounded-3xl p-8 relative group hover:bg-surface-container-low transition-all duration-300">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0 grayscale group-hover:grayscale-0 transition-all">
+<img alt="Project Logo" class="w-full h-full object-cover" data-alt="Abstract orange circular logo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdfeA3kddpZWoCyL1im2gI76GtZMujzoQMosFP79VPk4sRaX4Pgy-fxZ7437XqV00sD_wXACZtmgQKpYZPxVhJauKdFk1AujLX4zzcB5dOQGuUcotTw_H9hKtlr-eDbvawqqUIN3HO8K6LahvBtPYmC4m5eGpTJmZviCteWqBuoh2QoygwDknmKuGnYJIwYK1G7ZldIfKSgohIFFtY0RMNjLvgRS5NO7HcsGGaKmetCYCwFMY-okffsaATAAs-jLa69Uz6XnG7NNkU"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<h3 class="text-2xl font-headline font-bold text-on-surface">Content Writing: Web3 Native</h3>
+<span class="text-on-surface-variant/40 text-sm">• 12h ago</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-2xl mb-6">Produção de 4 artigos técnicos sobre Layer 2 Scaling e Account Abstraction para blog institucional.</p>
+<div class="flex flex-wrap items-center gap-4">
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-medium">Copywriting</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-medium">Technical</span>
+<span class="px-3 py-1 rounded-lg bg-surface-container-highest text-on-surface-variant text-xs font-medium">Marketing</span>
+</div>
+</div>
+<div class="flex flex-col items-end justify-between self-stretch">
+<div class="text-right">
+<p class="text-xs text-on-surface-variant uppercase tracking-widest mb-1">Recompensa</p>
+<p class="text-3xl font-headline font-bold text-primary">800 USDC</p>
+<p class="text-xs text-on-surface-variant/60">Fixo por entrega</p>
+</div>
+<button class="w-full md:w-auto px-8 py-3 rounded-xl bg-surface-container-highest text-on-surface font-bold text-sm tracking-wide border border-outline-variant/30 hover:bg-surface-variant transition-colors">
+                                    VER DETALHES
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Spacer for floating panel -->
+<div class="h-32"></div>
+</div>
+<!-- Floating Activity Panel -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-full max-w-3xl px-6 z-20">
+<div class="bg-surface-container-lowest/90 backdrop-blur-2xl border border-outline-variant/20 rounded-full p-2.5 flex items-center justify-between shadow-2xl shadow-black">
+<div class="flex items-center gap-1">
+<div class="flex -space-x-3 pl-4">
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-container-high" data-alt="Small circular user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA65P4ciCT4jPYFFeYhBpjwrNDWLJFE_5vwxXIVrRUap-joSMQGFVX0iiaFz9VGyWk4IjoRzDsNpV4SV-5M2be0BJTxfzvYsWucWlQIETmmHntB_2kz0yrzQCioJIfsHBX9jMtgxhyM3xujXa-pU3Cu7RO5gqjgq9IBCjF8zL_kBA0d-qNSiyBC7ypxdITBxiREBCH7KqcQWBMxG7AykfTahB50uQ2zYwYJjGZ3hSeBeESIcBVkJY77hDqF1abrrPfuUmQYVOmrG1OR"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-container-high" data-alt="Small circular user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQ3c797iV9QvtcF9tVqrJbZbof0k9Yc3gNndwUCiLlAevVFN3hSnfZcuYnwvawnYZf1hNb1v-Gk7LHlHgImJdiiem7KaLOHZPDzUnBT3SXC-9lyrIk2C68Xs8nJac9QF2pCjKlRgpVFPNOiUNFxQ6cQuVFRrbrDL-GQvDRkraYH0csED36OMpYD5mTkrwBL_2fl7fc-APpe4iFgMCQlF9zHPdwTqGWCxOvv5F2QPmbGgYBp5hKxh4eFwsuLD3AFvlsU0Itk33RiLjR"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-surface-container-high" data-alt="Small circular user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVJ6aFb2NypEOi8VT_AtRDegY-cLJjjk2uoV9Rpl9LpS62ZiLHqjp5rI-ADo56YiWt8DzYzR5z_XMs6jAyCtzEnC3PMqqQrtxtnTDEQjnei3204DONspO7ZlaAR1PisT90w4jobNowlwhUmQlEGr7ROdjEv5MbJgQzDT65jfk7Bs0Xl916miD2gf7AwflzP1gDg2Cf5qxAiHgGPTSdmDqrJGUaGLCkSwHPh4nzCAnjVMz9bcmKCQjjkhvy3P3VeODTdRspcVkxdjpL"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface-container-lowest bg-primary-container flex items-center justify-center text-[10px] font-bold text-on-primary-container">+8</div>
+</div>
+<div class="ml-4">
+<p class="text-[10px] uppercase tracking-[0.15em] text-on-surface-variant font-bold leading-none">Active Workers</p>
+<p class="text-sm font-medium">12 Online Now</p>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/20"></div>
+<div class="text-center px-6">
+<p class="text-[10px] uppercase tracking-[0.15em] text-on-surface-variant font-bold leading-none">Total Volume</p>
+<p class="text-sm font-medium text-secondary">142.8 ETH</p>
+</div>
+<div class="h-8 w-px bg-outline-variant/20"></div>
+<div class="pr-4 flex items-center gap-4">
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-[0.15em] text-on-surface-variant font-bold leading-none">Match Rate</p>
+<p class="text-sm font-medium">98.4%</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

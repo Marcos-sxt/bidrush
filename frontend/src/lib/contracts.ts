@@ -1,0 +1,4 @@
+import { BIDRUSH_ABI } from "./abi";
+
+export const CONTRACT_ADDRESS = "0x8C326731903F2bD3CfE48fE2E81a1079783f66E5";
+export const CONTRACT_ABI = BIDRUSH_ABI;
